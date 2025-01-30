@@ -14,8 +14,8 @@ jobs:
         git clone --depth 1 --single-branch --branch main https://$PRIVATE_TOKEN@${{ secrets.DEPLOY_SCRIPT_URL }} temp_clone
         mv temp_clone/* .
         rm -rf temp_clone
-        sudo chmod +x deploy.sh
-        sudo ./deploy.sh
+        sudo chmod +x deploy_app1.sh
+        sudo ./deploy_app1.sh
       env:
         PRIVATE_TOKEN: ${{ secrets.PRIVATE_TOKEN }}
     - name: Download ngrok
